@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>multiplication table</title>
+</head>
+<body>
+    
+    <table id="mytable">
+
+    </table>
+
+    <table id="mytable1">
+
+    </table>
+
+    <table id="mytable2">
+
+    </table>
+
+
+    <table id="mytable3">
+
+    </table>
+
+
+
+    <script>
+
+         let table = document.getElementById('mytable');
+        let output = "";
+
+        for (let i = 1; i <= 16; i++) {          // ცვლადს ანიჭებს მნიშვნლობას და ეს ციკლი იმუშავებს სანამ j-ს მნიშვნელობა ნაკლები ან ტოლი 16-ის
+            output += "<tr>";
+            for (let j = 1; j <= 16; j++) {     
+                if (i == 1 && j == 1) {              // && ლოგიკური ოპერატორი (და)
+                    output += "<th>X</th>";
+                } else {
+                    let result = (i * j).toString(16);    // ახდენს ცონვერტაციას 16ობით სისტემაში
+                    output += "<th>" + result + "</th>";
+                }
+            }
+            output += "</tr>";
+        }
+
+        table.innerHTML = output;
+
+
+
+
+
+let table1 = document.getElementById('mytable1');
+let output1 = "";
+
+for (let i = 1; i <= 10; i++) {     // ცვლადს ანიჭებს მნიშვნლობას და ეს ციკლი იმუშავებს სანამ j-ს მნიშვნელობა ნაკლები ან ტოლი 16-ის
+    output1 += "<tr>";
+    for (let j = 1; j <= 10; j++) {
+        if (i == 1 && j == 1)  {     // && ლოგიკური ოპერატორი (და)
+            output1 += "<th>X</th>";
+       } else {
+            let result = (i * j).toString(10);     // ახდენს ცონვერტაციას 10ობით სისტემაში
+            output1 += "<th>" + result + "</th>";
+        }
+    }
+    output1 += "</tr>";
+}
+
+table1.innerHTML = output1;
+
+
+
+
+
+let table2 = document.getElementById('mytable2');
+let output2 = "";
+
+for (let i = 1; i <= 8; i++) {     // ცვლადს ანიჭებს მნიშვნლობას და ეს ციკლი იმუშავებს სანამ j-ს მნიშვნელობა ნაკლები ან ტოლი 16-ის
+    output2 += "<tr>";
+    for (let j = 1; j <= 8; j++) {
+        if (i == 1 && j == 1)       // && ლოგიკური ოპერატორი (და)
+            output2 += "<th>X</th>";
+        else {
+            let result = (i * j).toString(8);    // ახდენს ცონვერტაციას 8ობით სისტემაში
+             output2 += "<th>" + result + "</th>";
+        }
+    }
+    output2 += "</tr>";
+}
+
+table2.innerHTML = output2;
+
+
+
+
+
+
+let table3 = document.getElementById('mytable3');
+let output3 = "";
+
+for (let i = 1; i <= 4; i++) {     // ცვლადს ანიჭებს მნიშვნლობას და ეს ციკლი იმუშავებს სანამ j-ს მნიშვნელობა ნაკლები ან ტოლი 16-ის
+    output3 += "<tr>";
+    for (let j = 1; j <= 4; j++) {
+        if (i == 1 && j == 1)       // && ლოგიკური ოპერატორი (და)
+            output3 += "<th>X</th>";
+        else {
+            let result = (i * j).toString(4);     // ახდენს ცონვერტაციას 4ობით სისტემაში
+             output3 += "<th>" + result + "</th>";
+        }
+    }
+    output3 += "</tr>";
+}
+
+table3.innerHTML = output3;
+
+
+
+    </script>
+
+
+</body>
+</html>
